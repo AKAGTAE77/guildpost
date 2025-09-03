@@ -1,0 +1,44 @@
+
+:root{
+  --bg:#0e1221; --panel:#131838; --panel-2:#0f142e; --stroke:#232a5b; --text:#eef1ff;
+  --muted:#a9add6; --brand:#5b6bff; --ok:#24c18f; --warn:#ffb020; --danger:#ff5b5b;
+  --scout:#28c76f; --tank:#ff6b6b; --general:#4aa2ff; --mage:#a678ff; --merchant:#f5b041; --merc:#9aa0aa;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.container{display:flex;min-height:100vh}
+.sidebar{width:240px;background:var(--panel);border-right:1px solid var(--stroke);padding:16px;position:sticky;top:0;align-self:flex-start;min-height:100vh}
+.brand{font-weight:800;letter-spacing:.3px;margin-bottom:18px;display:flex;gap:8px;align-items:center}
+.brand .logo{width:28px;height:28px;display:grid;place-items:center;background:var(--brand);border-radius:8px;font-weight:900;color:#fff}
+.nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;margin:4px 0;border:1px solid transparent}
+.nav a.active,.nav a:hover{background:var(--panel-2);border-color:var(--stroke)}
+.main{flex:1;display:flex;flex-direction:column;min-width:0}
+.topbar{position:sticky;top:0;background:var(--panel);border-bottom:1px solid var(--stroke);padding:12px 18px;display:flex;justify-content:space-between;align-items:center}
+.title{font-size:18px;font-weight:700}
+.page{padding:20px;max-width:1200px;width:100%;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--panel-2);border:1px solid var(--stroke);border-radius:16px;padding:16px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.card h3{margin:4px 0 10px}
+.kpi{font-size:30px;font-weight:900}
+.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--stroke);padding:4px 10px;border-radius:999px;font-size:12px}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.item{background:var(--panel-2);border:1px solid var(--stroke);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--stroke);border-radius:10px;color:var(--text);padding:10px}
+button{background:var(--brand);border:none;color:#fff;border-radius:10px;padding:10px 12px;cursor:pointer;transition:transform .06s ease, box-shadow .2s}
+button:hover{box-shadow:0 8px 20px rgba(91,107,255,.25)}
+button.ghost{background:transparent;border:1px solid var(--stroke);color:var(--text)}
+button.small{padding:6px 8px;font-size:12px}
+.muted{color:var(--muted);font-size:13px}
+footer{padding:20px;color:var(--muted);text-align:center}
+.tag{display:inline-flex;gap:6px;align-items:center}
+.tag.Scout{--c:var(--scout)} .tag.Tank{--c:var(--tank)} .tag.General{--c:var(--general)}
+.tag.Mage{--c:var(--mage)} .tag.Merchant{--c:var(--merchant)} .tag.Mercenary{--c:var(--merc)}
+.tag{border:1px solid var(--stroke);padding:4px 8px;border-radius:999px}
+.tag::before{content:"";width:8px;height:8px;border-radius:999px;background:var(--c)}
+.table{width:100%;border-collapse:separate;border-spacing:0 8px}
+.table tr{background:var(--panel-2);border:1px solid var(--stroke)}
+.table td,.table th{padding:10px 12px}
+hr{border:none;border-top:1px solid var(--stroke);margin:16px 0}
+canvas{background:var(--panel-2);border:1px solid var(--stroke);border-radius:12px;padding:10px}
