@@ -1,1 +1,40 @@
-<!doctype html><meta charset='utf-8'><title>settings.html</title><link rel='stylesheet' href='styles.css'><div style='padding:20px;color:#fff'>Placeholder settings.html</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — Guild Post</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <aside class="sidebar">
+    <div class="brand"><div class="logo">GP</div>Guild Post</div>
+    <nav class="nav">
+      <a href="index.html">🏠 Dashboard</a>
+      <a href="quests.html">🗂️ Quests</a>
+      <a href="idle.html">⏳ Idle Tickets</a>
+      <a href="leaderboard.html">🏆 Leaderboard</a>
+      <a href="analytics.html">📊 Analytics</a>
+      <a href="settings.html" class="active">⚙️ Settings</a>
+      <a href="login.html">🔑 Login</a>
+      <a href="signup.html">🧾 Sign Up</a>
+    </nav>
+  </aside>
+  <div class="main">
+    <div class="topbar">
+      <div class="title">Settings</div>
+      <!-- Who's signed in shows here via settings.js -->
+    </div>
+
+    <div class="page" id="page-root">
+      <!-- Content injected by settings.js -->
+    </div>
+
+    <footer>© <span id="year"></span> Guild Post — Demo</footer>
+  </div>
+</div>
+<script src="app.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>
